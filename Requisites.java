@@ -20,6 +20,7 @@ public class Requisites {
 	    preRequisites.put("CPSC457", "CPSC331 | CPSC359");
 	    preRequisites.put("MATH211", "");
 	    preRequisites.put("MATH265", "");
+	    preRequisites.put("STAT213", "");
 	    
 	    antiRequisites.put("CPSC231","CPSC215 | CPSC217 | CPSC235 | DATA211 | ENGG233 | ENCM339");
 	    antiRequisites.put("CPSC233","CPSC219 | CPSC235 | ENEL497 | ENCM493");
