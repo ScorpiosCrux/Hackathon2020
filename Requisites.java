@@ -7,7 +7,7 @@ public class Requisites {
 	
 	
 	public Requisites() {
-		preRequisites.put("CPSC231", "");
+	    preRequisites.put("CPSC231", "");
 	    preRequisites.put("CPSC233", "CPSC231");    
 	    preRequisites.put("MATH211", "");    
 	    preRequisites.put("MATH271", "MATH211");    
@@ -21,19 +21,18 @@ public class Requisites {
 	    preRequisites.put("MATH211", "");
 	    preRequisites.put("MATH265", "");
 	    
-
-		antiRequisites.put("CPSC231","CPSC215 | CPSC217 | CPSC235 | DATA211 | ENGG233 | ENCM339");
-		antiRequisites.put("CPSC233","CPSC219 | CPSC235 | ENEL497 | ENCM493");
-		antiRequisites.put("MATH211","MATH213");
-		antiRequisites.put("MATH271","");
-		antiRequisites.put("CPSC331","CPSC319");
-		antiRequisites.put("CPSC313","");
-		antiRequisites.put("CPSC355","CPSC265 | ENCM369");
-		antiRequisites.put("CPSC359","CPSC325 | CPSC455 | ENCM415");
-		antiRequisites.put("CPSC413","");
-		antiRequisites.put("CPSC449","");
-		antiRequisites.put("CPSC457","");
-		antiRequisites.put("MATH265","MATH249 | MATH275");
+	    antiRequisites.put("CPSC231","CPSC215 | CPSC217 | CPSC235 | DATA211 | ENGG233 | ENCM339");
+	    antiRequisites.put("CPSC233","CPSC219 | CPSC235 | ENEL497 | ENCM493");
+	    antiRequisites.put("MATH211","MATH213");
+	    antiRequisites.put("MATH271","");
+	    antiRequisites.put("CPSC331","CPSC319");
+	    antiRequisites.put("CPSC313","");
+	    antiRequisites.put("CPSC355","CPSC265 | ENCM369");
+	    antiRequisites.put("CPSC359","CPSC325 | CPSC455 | ENCM415");
+	    antiRequisites.put("CPSC413","");
+	    antiRequisites.put("CPSC449","");
+	    antiRequisites.put("CPSC457","");
+	    antiRequisites.put("MATH265","MATH249 | MATH275");
 	}
 	
 	
