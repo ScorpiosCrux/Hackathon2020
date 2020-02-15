@@ -13,8 +13,10 @@ public class preReq
     preReq.put("CPSC331", "MATH271 | CPSC233");    
     preReq.put("CPSC313", "MATH271 | CPSC233 | PHIL279");
     preReq.put("CPSC413", "CPSC313 | CPSC331 | MATH211 | MATH265");
-    preReq.put("CPSC449", "CPSC331 | PHIL 279");    
-    preReq.put("CPSC457", "CPSC331 | CPSC 359");
+    preReq.put("CPSC355", "CPSC233");
+    preReq.put("CPSC359", "CPSC355 | CPSC279");
+    preReq.put("CPSC449", "CPSC331 | PHIL279");    
+    preReq.put("CPSC457", "CPSC331 | CPSC359");
     preReq.put("MATH211", "");
     preReq.put("MATH265", "");
 
