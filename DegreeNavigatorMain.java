@@ -32,18 +32,31 @@ public class DegreeNavigatorMain {
 		}
 		uhUhUhUhAbnerYouShouldNameItAMethodYourHeartDesiresNowIHopeYouHaveToWriteThatEverytime(classesTaken,allPrerequisites);
 		ArrayList<String> finalizedArray = new ArrayList<String>();
+		boolean appearsInPrerequisites;
+		String stringCheck;
 		for (String i : allPrerequisites){
-			for (int j=0; j < finalizedArray.size(); j++){
-				String additionToFinalArray;
-				additionToFinalArray = finalizedArray(j);
-				boolean appearsInPrerequisites = additionToFinalArray.equals(i);
-				if (appearsInPrerequisites == false){
-					finalizedArray.add()
+			boolean dontAdd = false;
+			for (int j = 0; j < finalizedArray.size(); j++){
+				stringCheck = finalizedArray(j);
+				appearsInPrerequisites = stringCheck.equal(i);
+				if (appearsInPrerequisites == true){
+					dontAdd = true;
 				}
 				else{
 					continue;
 				}
 			}
+			if dontAdd = true{
+				continue;
+			}
+			else if dontAdd = false{
+				finalizedArray.add(i);
+			}
+			else{
+				System.out.println("Something went wrong. Blame Tyler.");
+			}
+			}
+
 		}
 		for (String i : finalizedArray) {
 			int occurrences = Collections.frequency(allPrerequisites, i);
@@ -105,5 +118,4 @@ public class DegreeNavigatorMain {
 			}	
 		}
 		System.out.println("All set, thanks!");
-	}
 }
