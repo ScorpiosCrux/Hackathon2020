@@ -17,7 +17,6 @@ public class DegreeNavigatorMain {
 		this.requisites = new Requisites(); 
 		System.out.println(this.requisites.getPreRequisites().keySet());
 		analyze(requisites.getPreRequisites());
-		
 	}
 	
 	
@@ -41,17 +40,17 @@ public class DegreeNavigatorMain {
 	public void compareAntirequisites(ArrayList<String> x)
 	{
 		//String[]trimmedW;
-		String s;
-		String w;
-		int i;
-		int j;
-		int h;
+		String s, w;
+		int j, h;
 		HashMap<String, String> antiRequisites = requisites.getAntiRequisites();
-		for (i=0; i<x.size(); i++){
+		for (int i=0; i<x.size(); i++){
+			System.out.println("debug1");
 			s = x.get(i);
-			String[] antiRequisiteTrimmed = antiRequisites.get(s).split("|");
-			String antiRequisite = antiRequisiteTrimmed[1];
+			System.out.println("debug2");
 			for (j=0; j<antiRequisites.size(); j++){}
+				//String[] antiRequisiteTrimmed = antiRequisites.get(j).split("|");
+				System.out.println("debug3");
+				//String antiRequisite = antiRequisiteTrimmed[1];
 				w = antiRequisites.get(j).trim();
 				h = w.compareTo(s);
 				if (h!=0){
@@ -59,6 +58,7 @@ public class DegreeNavigatorMain {
 					return;
 				}	
 				else{
+					System.out.println("daddysGirl");
 					continue;
 				}	
 		}
