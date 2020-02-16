@@ -28,9 +28,12 @@ func main() {
 	jobTitle := "web+developer"
 	count := 0
 
-	c := colly.NewCollector(
-		colly.CacheDir("./indeed_cache"),
-	)
+//	// This will make the code compile faster
+// 	c := colly.NewCollector(
+// 		colly.CacheDir("./indeed_cache"),
+// 	)
+	
+	c := colly.NewCollector()
 
 	dC := c.Clone()
 
