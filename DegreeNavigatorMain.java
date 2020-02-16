@@ -37,9 +37,9 @@ public class DegreeNavigatorMain {
 		}
 		
 	}
+
 	public void compareAntirequisites(ArrayList<String> x)
 	{
-		//String[]trimmedW;
 		String s, w;
 		int j, h;
 		HashMap<String, String> antiRequisites = requisites.getAntiRequisites();
@@ -62,5 +62,27 @@ public class DegreeNavigatorMain {
 					continue;
 				}	
 		}
+	}
+		public void compareAntirequisites(ArrayList<String> x, ArrayList<String> y)
+	{
+		String s, w;
+		int j, h;
+		boolean isAntirequisite;
+		HashMap<String, String> antiRequisites = requisites.getAntiRequisites();
+		for (int i=0; i<x.size(); i++){
+			s = x.get(i);
+			for (j=0; j<y.size(); j++){
+					w = y.get(j);
+					isAntirequisite = s.equals(w);
+					if (isAntirequisite == true){
+						System.out.println("Sorry, you cannot take this class. Please go see an advisor.");
+						return;
+					}
+					else{
+						continue;
+					}
+				}	
+		}
+		System.out.println("All set, thanks!");
 	}
 }
