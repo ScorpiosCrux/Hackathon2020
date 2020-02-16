@@ -9,7 +9,7 @@ public class DegreeNavigatorMain {
 
 	private Majors major;
 	private Concentration concentration;
-	private Requisites requisites;
+	public Requisites requisites;
 	
 	public DegreeNavigatorMain(){
 		this.major = new Majors("computer science", "information security");
@@ -38,5 +38,24 @@ public class DegreeNavigatorMain {
 		}
 		
 	}
-
+/*	public void compareAntirequisites(ArrayList<String> x)
+	{
+		String s;
+		String w;
+		int i,j,h;
+		HashMap<String, String> antiRequisites = requisites.getAntiRequisites();
+		for (i=0; i<x.size; i++){
+			s = x.get(i);
+			String antiReqs = antiRequisites.get(s).split("|");
+			for (j=0; j<antiRequisites.size; j++)
+				w = antiRequisites.get(j).trim();
+				h = w.compareTo(s);
+				if (h!=0){
+					System.out.println("Sorry, you cannot take this class. Go see an advisor.");
+					return;
+				}	
+				else{}	
+		}
+	}
+	*/
 }
