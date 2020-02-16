@@ -1,5 +1,12 @@
 # Hackathon2020
-#### A Brief Overview
+#### How To Run
+
+``
+javac *.java
+java DegreeNavigatorParentWindow
+``
+
+#### At A Glance
 The purpose of this program is to take in the courses someone has taken and give back a list of recommended courses to look out for.
 #### What does this do for students at the university?
 Class registration is, without a doubt, one of the most important aspects in ensuring that your
@@ -10,7 +17,7 @@ from this issue or simply wish to reaffirm
 if their choices are in line with the program or not.
 It's true that advisors can provide much of the same information, but advisors also take longer to respond
 and they aren't as accessible. This program attempts to remedy that.
-#### Technical Side
+#### Behind the GUI
 The program takes in an input and sorts out the courses that the person can take.
 Upon spitting the list of classes back out, the selected courses will be chosen in a way such that a course
 will have the most priority if it is required by
@@ -26,7 +33,7 @@ The program offers a simple to use, easy to follow GUI which is incredibly user 
 unsusceptible to answers designed to break the program, and pleasing to the eye. It ensures that
 choosing your classes is an accessible, easy aspect of your academic career so that you don't feel
 overwhelmed by choices.
-#### Future Prospects
+#### The Future
 This is more of a proof of concept than anything; Development of this revamped degree navigator
 would expand to include every major, class and concentration, while ideally being promoted enough that
 students have no trouble finding it. The degree navigator would also expand to not only prioritize the
