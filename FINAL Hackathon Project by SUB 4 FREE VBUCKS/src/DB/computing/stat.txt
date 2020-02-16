@@ -1,0 +1,12 @@
+react : Total- 625 jobs|Mean- 89 jobs
+django : Total- 34 jobs|Mean- 4 jobs
+c/c++ : Total- 0 jobs|Mean- 0 jobs
+java : Total- 314 jobs|Mean- 44 jobs
+pearl : Total- 0 jobs|Mean- 0 jobs
+javascript : Total- 981 jobs|Mean- 140 jobs
+vue : Total- 377 jobs|Mean- 53 jobs
+angular : Total- 563 jobs|Mean- 80 jobs
+python : Total- 103 jobs|Mean- 14 jobs
+c# : Total- 49 jobs|Mean- 7 jobs
+go : Total- 155 jobs|Mean- 22 jobs
+haskell : Total- 0 jobs|Mean- 0 jobs

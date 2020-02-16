@@ -1,0 +1,12 @@
+go: 34 jobs
+react: 97 jobs
+vue: 75 jobs
+django: 7 jobs
+python: 17 jobs
+pearl: 0 jobs
+c#: 9 jobs
+haskell: 0 jobs
+javascript: 145 jobs
+angular: 95 jobs
+c/c++: 0 jobs
+java: 48 jobs
