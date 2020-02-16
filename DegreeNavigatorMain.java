@@ -31,21 +31,21 @@ public class DegreeNavigatorMain {
 			}
 		}
 		uhUhUhUhAbnerYouShouldNameItAMethodYourHeartDesiresNowIHopeYouHaveToWriteThatEverytime(classesTaken,allPrerequisites);
-		ArrayList<String> finalizedArray = new ArrayList<String>();
+/*		ArrayList<String> finalizedArray = new ArrayList<String>();
 		for (String i : allPrerequisites){
 			for (int j=0; j < finalizedArray.size(); j++){
 				String additionToFinalArray;
 				additionToFinalArray = finalizedArray(j);
 				boolean appearsInPrerequisites = additionToFinalArray.equals(i);
 				if (appearsInPrerequisites == false){
-					finalizedArray.add()
+					finalizedArray.add();
 				}
 				else{
 					continue;
 				}
 			}
-		}
-		for (String i : finalizedArray) {
+		}*/
+		for (String i : requisites.keySet()) {
 			int occurrences = Collections.frequency(allPrerequisites, i);
 			System.out.println(i + ": " + occurrences);
 		}
