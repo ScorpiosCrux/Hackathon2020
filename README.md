@@ -1,10 +1,10 @@
 # Hackathon2020
 #### How To Run
 
-``
+```
 javac *.java
 java DegreeNavigatorParentWindow
-``
+```
 
 #### At A Glance
 The purpose of this program is to take in the courses someone has taken and give back a list of recommended courses to look out for.
