@@ -17,6 +17,7 @@ public class DegreeNavigatorMain {
 		this.requisites = new Requisites(); 
 		System.out.println(this.requisites.getPreRequisites().keySet());
 		analyze(requisites.getPreRequisites());
+		makeAntirequisites(requisites.getAntiRequisites());
 	}
 	
 	
@@ -35,35 +36,23 @@ public class DegreeNavigatorMain {
 			int occurrences = Collections.frequency(allPrerequisites, i);
 			System.out.println(i + ": " + occurrences);
 		}
-		
 	}
 
-	public void compareAntirequisites(ArrayList<String> x)
-	{
-		String s, w;
-		int j, h;
-		HashMap<String, String> antiRequisites = requisites.getAntiRequisites();
-		for (int i=0; i<x.size(); i++){
-			System.out.println("debug1");
-			s = x.get(i);
-			System.out.println("debug2");
-			for (j=0; j<antiRequisites.size(); j++){}
-				//String[] antiRequisiteTrimmed = antiRequisites.get(j).split("|");
-				System.out.println("debug3");
-				//String antiRequisite = antiRequisiteTrimmed[1];
-				w = antiRequisites.get(j).trim();
-				h = w.compareTo(s);
-				if (h!=0){
-					System.out.println("Sorry, you cannot take this class. Go see an advisor.");
-					return;
-				}	
-				else{
-					System.out.println("daddysGirl");
-					continue;
-				}	
+	public ArrayList<String> makeAntirequisites(HashMap<String, String> requisites){
+		ArrayList<String> allAntirequisites = new ArrayList<String>();
+		for (String i : requisites.values()) {
+			i = i.replace(" | ", " ");
+			String[] array = i.split(" ");
+			for (int j = 0; j < array.length; j++) {
+				if (array[j].equals(""))
+					break;
+				allAntirequisites.add(array[j]);
+			}
 		}
+		return allAntirequisites;
 	}
-		public void compareAntirequisites(ArrayList<String> x, ArrayList<String> y)
+
+	public void compareAntirequisites(ArrayList<String> x, ArrayList<String> y)
 	{
 		String s, w;
 		int j, h;
