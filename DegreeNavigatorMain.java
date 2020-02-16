@@ -16,12 +16,11 @@ public class DegreeNavigatorMain {
 		this.concentration = new Concentration();
 		this.requisites = new Requisites(); 
 		System.out.println(this.requisites.getPreRequisites().keySet());
-		analyze(requisites.getPreRequisites());
+		//analyze(requisites.getPreRequisites());
 		makeAntirequisites(requisites.getAntiRequisites());
 	}
 	
-	
-	public void analyze(HashMap<String, String> requisites) {
+	public void analyze(ArrayList<String> classesTaken, HashMap<String, String> requisites) {
 		ArrayList<String> allPrerequisites = new ArrayList<String>();
 		for (String i : requisites.values()) {
 			i = i.replace(" | ", " ");
@@ -32,9 +31,29 @@ public class DegreeNavigatorMain {
 				allPrerequisites.add(array[j]);
 			}
 		}
+		uhUhUhUhAbnerYouShouldNameItAMethodYourHeartDesiresNowIHopeYouHaveToWriteThatEverytime(classesTaken,allPrerequisites);
 		for (String i : requisites.keySet()) {
 			int occurrences = Collections.frequency(allPrerequisites, i);
 			System.out.println(i + ": " + occurrences);
+		}
+	}
+
+	//put classes taken first, put prereqs second
+	public void uhUhUhUhAbnerYouShouldNameItAMethodYourHeartDesiresNowIHopeYouHaveToWriteThatEverytime(ArrayList<String> x, ArrayList<String> y){
+		String s;
+		String w;
+		for (int i=0; i<x.size(); i++){
+			s = x.get(i);
+			for (int j=0; j<y.size(); j++){
+				w = y.get(j);
+				boolean hasTakenPrereq = s.equals(w);
+				if (hasTakenPrereq == true){
+					y.remove(j);
+				}
+				else{
+					continue;
+				}
+			}	
 		}
 	}
 
@@ -61,16 +80,16 @@ public class DegreeNavigatorMain {
 		for (int i=0; i<x.size(); i++){
 			s = x.get(i);
 			for (j=0; j<y.size(); j++){
-					w = y.get(j);
-					isAntirequisite = s.equals(w);
-					if (isAntirequisite == true){
-						System.out.println("Sorry, you cannot take this class. Please go see an advisor.");
-						return;
-					}
-					else{
-						continue;
-					}
-				}	
+				w = y.get(j);
+				isAntirequisite = s.equals(w);
+				if (isAntirequisite == true){
+					System.out.println("Sorry, you cannot take this class. Please go see an advisor.");
+					return;
+				}
+				else{
+					continue;
+				}
+			}	
 		}
 		System.out.println("All set, thanks!");
 	}
