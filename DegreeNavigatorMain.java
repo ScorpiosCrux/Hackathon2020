@@ -16,7 +16,6 @@ public class DegreeNavigatorMain {
 		this.concentration = new Concentration();
 		this.requisites = new Requisites(); 
 		System.out.println(this.requisites.getPreRequisites().keySet());
-		//analyze(requisites.getPreRequisites());
 		makeAntirequisites(requisites.getAntiRequisites());
 	}
 	
@@ -32,6 +31,20 @@ public class DegreeNavigatorMain {
 			}
 		}
 		uhUhUhUhAbnerYouShouldNameItAMethodYourHeartDesiresNowIHopeYouHaveToWriteThatEverytime(classesTaken,allPrerequisites);
+/*		ArrayList<String> finalizedArray = new ArrayList<String>();
+		for (String i : allPrerequisites){
+			for (int j=0; j < finalizedArray.size(); j++){
+				String additionToFinalArray;
+				additionToFinalArray = finalizedArray(j);
+				boolean appearsInPrerequisites = additionToFinalArray.equals(i);
+				if (appearsInPrerequisites == false){
+					finalizedArray.add();
+				}
+				else{
+					continue;
+				}
+			}
+		}*/
 		for (String i : requisites.keySet()) {
 			int occurrences = Collections.frequency(allPrerequisites, i);
 			System.out.println(i + ": " + occurrences);
